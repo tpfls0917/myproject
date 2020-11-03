@@ -10,72 +10,37 @@ $(function() {
             $('.depth2').stop().slideUp(200);
         }
     );
-})
+});
 
-// slider
-$(function() {
-    var img_num = 0; // 이미지 번호
-    var duration = 4000; // 인터벌 시간
-    var sldier; // slider 실행 객체 변수
+// 메인페이지 배너 bxslider 
+$(document).ready(function(){
 
-    // 초기화
-    $('.slider > img').fadeOut();
-    $('.slider > img').eq(img_num).fadeIn();
+  $('#visual').imagesLoaded( function() {
+    // images have loaded
+    $('.slider').bxSlider({
+      // 효과: horizontal', 'vertical', 'fade'
+      mode: 'fade',
+      // 인터벌 시간
+      pause: 5000,
+      // 자동재생: true | false
+      auto: true
+    });
+  });
 
-    function changeSlider() {
-        // 전체 이미지 fadeOut
-        $('.slider > img').fadeOut();
-        // 현재 이미지 fadeIn
-        $('.slider > img').eq(img_num).fadeIn();
-        // pager UI 업데이트
-        $('.pager > a').removeClass('active');
-        $('.pager > a').eq(img_num).addClass('active');
-    }
-
-    // 슬라이더 재생
-    function sliderStart() {
-        slider = setInterval(function() {
-            // 마지막 이미지 번호면 처음으로
-            if(img_num >= 1) { img_num = 0 } else {
-                // 다음 이미지 번호로
-                img_num = img_num + 1;
-            }
-            changeSlider(img_num);
-        }, duration);
-    }
-
-    // 슬라이더 정지
-    function sliderStop() {
-        clearInterval(slider);
-        console.log('stop');
-    }
-
-    sliderStart();
-
-    // 마우스가 올라가면 슬라이더 정지
-    $('.slider').hover(
-        function() {
-            sliderStop();
-        },
-        function() {
-            sliderStart();
-            console.log('start');
-        }
-    )
-})
+});
 
 // choice 슬라이더
 $(function () {
     var left = 0;
-    var duration = 4000;
-    var slider;
+    var duration = 5000;
+    var choiceSlider;
 
     // 초기화
-    $('#choice > .choice2').show();
-    $('#choice > .choice2').eq(left).hide();
+    $('#choice > .choice2').hide();
+    $('#choice > .choice2').eq(left).show();
 
     $('.choice_pager > a').on('click', function() {
-      clearInterval(slider);
+      clearInterval(choiceSlider);
       var index = $(this).index();
       $("#choice > .choice2").hide();
       $("#choice > .choice2").eq(index).show();
@@ -85,7 +50,7 @@ $(function () {
     })
     
     function sliderStart() {
-      slider = setInterval(function () {
+      choiceSlider = setInterval(function () {
         $("#choice > .choice2").hide();
         if(left >= 1) {
           left = 0;
@@ -104,7 +69,7 @@ $(function () {
     // 마우스가 올라가면 슬라이더 정지
     $('.choice2, .choice_pager').hover(
       function() {
-        clearInterval(slider);
+        clearInterval(choiceSlider);
       },
       function() {
         sliderStart();
@@ -112,7 +77,7 @@ $(function () {
       }
     )
   
-  }) //$end
+  }); //$end
 
 // bxslider 
 $(document).ready(function(){

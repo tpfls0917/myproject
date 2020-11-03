@@ -1,58 +1,202 @@
 /* sub1_1.css */
 
-/* header */
-#content > header {
+/* lnb */
+#lnb li a {
+    width: 400px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* sub main contents */
+#sub_main_contents {
+    width: 1200px;
     margin: 0 auto;
-    max-width: 1920px;
-    min-width: 1200px;
-    height: 330px;
-    background: url(../images/sub1_1_banner.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    /* outline: 2px solid red; */
+    /* background: #ccc; */
     position: relative;
 }
-#content h2 {
-    color: #fff;
-    font-size: 40px;
+#sub_main_contents h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 20px;
+}
+#sub_main_contents h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #c5b49d;
+    position: absolute;
+    left: 20px;
+}
+#sub_main_contents h5 {
+    font-size: 24px;
+    color: #7f4925;
+}
+#sub_main_contents .point {
+    color: #7f4925;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* sub content01 */
+#sub_main_contents > .sub_content1 {
+    position: relative;
+    /* background: #aab; */
+    /* outline: 2px solid orange; */
+    height: 750px;
+    overflow: hidden;
+}
+#sub_main_contents > .sub_content1 > h4 {
+    position: absolute;
+    top: 50px;
+}
+#sub_main_contents > .sub_content1 > img {
+    float: left;
+    padding-left: 20px;
+    padding-top: 150px;
+}
+#sub_main_contents > .sub_content1 > div {
+    text-align: left;
+    position: relative;
+}
+#sub_main_contents > .sub_content1 > div > p:nth-child(1) {
+    position: absolute;
+    left: 670px;
+    top: 180px;
+}
+#sub_main_contents > .sub_content1 > div > p:nth-child(2) {
+    position: absolute;
+    left: 670px;
+    top: 285px;
+}
+#sub_main_contents > .sub_content1 > div > p:nth-child(3) {
+    position: absolute;
+    left: 670px;
+    top: 420px;
+}
+#sub_main_contents > .sub_content1 > div > .point {
+    position: absolute;
+    text-align: center;
+    left: 274px;
+    top: 597px;
+}
+
+/* sub content02 */
+#sub_main_contents > .sub_content2 {
+    position: relative;
+    /* background: #acc; */
+    height: 750px;
+    /* outline: 2px solid rgb(85, 85, 112); */
+    overflow: hidden;
+}
+#sub_main_contents > .sub_content2 > h4 {
+    position: absolute;
+    top: 50px;
+}
+#sub_main_contents > .sub_content2 ul {
+    float: left;
+    text-align: left;
+    margin-left: 127px;
+    margin-top: 153px;
+}
+#sub_main_contents > .sub_content2 li {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+#sub_main_contents > .sub_content2 img {
+    position: absolute;
+    left: 580px;
+    top: 120px;
+    /* outline: 2px solid red; */
+}
+#sub_main_contents > .sub_content2 > .point {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 140px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    bottom: 140px;
 }
-
-/* lnb 영역 */
-#lnb {
-    width: 1200px;
-    margin: 0 auto;
-    background: #ccc;
-}
-#lnb::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-#lnb li a {
-    float: left;
-    width: 400px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    font-style: 18px;
+#sub_main_contents > .sub_content2 > p:last-child {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 105px;
+    color: #7f4925;
+    font-size: 20px;
     font-weight: 500;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    background: #dcd4bb;
 }
 
-/* breadcrumb */
-#main > .location {
+/* sub content03 */
+#sub_main_contents > .sub_content3 {
+    position: relative;
+    /* background: #bcf; */
+    height: 1150px;
+    /* outline: 2px solid red; */
+}
+#sub_main_contents > .sub_content3 > h4 {
+    position: absolute;
+    top: 50px;
+    text-align: left;
+}
+
+/* factory */
+#sub_main_contents > .sub_content3 > .factory {
+    /* background: #aab; */
+    overflow: hidden;
+    position: absolute;
+    top: 200px;
+}
+#sub_main_contents > .sub_content3 > .factory > div {
+    float: left;
+    text-align: left;
+    margin-left: 73px;
+    margin-top: 40px;
+}
+#sub_main_contents > .sub_content3 > .factory > div > h5 {
+    margin-bottom: 25px;
+}
+#sub_main_contents > .sub_content3 > .factory > img:nth-of-type(1) {
+    margin-left: 45px;
+}
+#sub_main_contents > .sub_content3 > .factory > img:nth-of-type(2) {
+    margin-left: 30px;
+}
+
+/* modern */
+#sub_main_contents > .sub_content3 > .modern {
     /* background: #ccc; */
-    width: 1200px;
-    margin: 0 auto;
-    text-align: right;
-    text-transform: uppercase;
-    font-size: 12px;
-    padding-top: 30px;
-    padding-bottom: 50px;
+    position: absolute;
+    top: 485px;
+    overflow: hidden;
+}
+#sub_main_contents > .sub_content3 > .modern > img:nth-child(1) {
+    margin-left: 54px;
+}
+#sub_main_contents > .sub_content3 > .modern > img {
+    margin-right: 30px;
+}
+#sub_main_contents > .sub_content3 > .modern > div {
+    float: right;
+    text-align: left;
+    margin-top: 40px;
+}
+#sub_main_contents > .sub_content3 > .modern > div > h5 {
+    margin-bottom: 25px;
+}
+
+/* vintage */
+#sub_main_contents > .sub_content3 > .vintage {
+    /* background: #abc; */
+    position: absolute;
+    top: 770px;
+    overflow: hidden;
+}
+#sub_main_contents > .sub_content3 > .vintage > div {
+    float: left;
+    text-align: left;
+    margin-left: 73px;
+    margin-top: 40px;
+}
+#sub_main_contents > .sub_content3 > .vintage > div > h5 {
+    margin-bottom: 25px;
+}
+#sub_main_contents > .sub_content3 > .vintage > img {
+    margin-left: 30px;
 }

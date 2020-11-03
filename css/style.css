@@ -33,6 +33,63 @@ body {
     color: #dcd4bb;
 }
 
+/* sub 공통 부분 */
+/* header */
+#content > header {
+    margin: 0 auto;
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 330px;
+    background: url(../images/sub1_1_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* outline: 2px solid red; */
+    position: relative;
+}
+#content h2 {
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 140px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* lnb 영역 */
+#lnb {
+    width: 1200px;
+    margin: 0 auto;
+    background: #ccc;
+}
+#lnb::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#lnb li a {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-style: 18px;
+    font-weight: 500;
+    background: #dcd4bb;
+}
+
+/* breadcrumb */
+#main > .location {
+    /* background: #ccc; */
+    width: 1200px;
+    margin: 0 auto;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/* main */
 /* header */
 #main_header {
     /* background: #ccc; */
@@ -125,48 +182,28 @@ body {
 
 /* 메인 비주얼 */
 #visual {
-    outline: 2px solid red;
-    background: #ccc;
-    /* margin: 0 auto; */
-    position: relative;
+    /* outline: 2px solid red; */
+    /* background: #ccc; */
+    margin: 0 auto;
+    max-width: 1920px;
+    min-width: 1200px;
     overflow: hidden;
-    text-align: left;
-    width: 100%;
-    height: 600px;
 }
 
-#visual > .slider {
-    /* min-width: 1200px; */
-    width: 1920px;
-    height: 600px;
-    /* margin: 0 auto; */
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-    outline: 2px solid blue;
+/* bxslider */
+.bx-wrapper {
+    border: none;
 }
-.slider > img {
-    position: absolute;
-    left: 0;top: 0;
-}
-
-.pager {
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.pager > a {
-    float: left;
+.bx-wrapper .bx-pager.bx-default-pager a {
     width: 12px;
     height: 12px;
-    margin: 5px;
-    background: #dcd4bb;
     border-radius: 50%;
-    text-indent: -9999px;
 }
-.pager > a.active {
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
     background: #3c3032;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #dcd4bb;
 }
 
 /* 섹션 공통 제목 스타일 */
